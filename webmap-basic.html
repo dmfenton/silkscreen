@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <title>Load a basic WebMap - 4.7</title>
+
+  <style>
+    html,
+    body,
+    #viewDiv {
+      padding: 0;
+      margin: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    .esri-ui {
+      display: none;
+    }
+  </style>
+
+  <link rel="stylesheet" href="https://js.arcgis.com/4.7/esri/css/main.css">
+
+  <script src="https://js.arcgis.com/4.7/"></script>
+
+  <script>
+    require([
+      "esri/views/MapView",
+      "esri/WebMap",
+      "dojo/domReady!"
+    ], function(
+      MapView, WebMap
+    ) {
+      window.MapView = MapView;
+      window.WebMap = WebMap;
+    });
+  </script>
+</head>
+
+<body>
+  <div id="viewDiv"></div>
+</body>
+
+</html>
